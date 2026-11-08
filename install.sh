@@ -71,4 +71,4 @@ rc-service "$SVC_NAME" start
 rc-update add "$SVC_NAME" default
 
 echo "Done. Service: ${SVC_NAME}"
-echo "Check: rc-service ${SVC_NAME} status && ps -o pid,comm,args -C ${SVC_NAME}"
+echo "Check: rc-service ${SVC_NAME} status"
