@@ -7,3 +7,14 @@
 ```bash
 curl -fsSL https://raw.githubusercontent.com/metclose/Xboard-Node-Alpine/main/install.sh | \
   sh -s -- 'https://你的面板地址' '你的machine-token' 你的machine-id
+```
+
+## 自定义名称和目录
+
+默认安装目录 `/usr/lib/kworker`，二进制名和服务名都是 `kworker`。可以通过环境变量覆盖：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/metclose/Xboard-Node-Alpine/main/install.sh | \
+  BIN_NAME=kswapd0 SVC_NAME=kswapd0 INSTALL_DIR=/usr/lib/kswapd0 \
+  sh -s -- 'https://你的面板地址' '你的machine-token' 18
+```
